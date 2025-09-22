@@ -39,10 +39,10 @@ function Autoplay(interval = 3000) {
 type Item = { id: number; img: string; alt?: string; caption?: string };
 
 const items: Item[] = [
-  { id: 1, img: "/public/mock.jpg", alt: "Proyecto 1", caption: "Proyecto 1" },
-  { id: 2, img: "/public/mock.jpg", alt: "Proyecto 2", caption: "Proyecto 2" },
-  { id: 3, img: "/public/mock.jpg", alt: "Proyecto 3", caption: "Proyecto 3" },
-  { id: 4, img: "/public/mock.jpg", alt: "Proyecto 4", caption: "Proyecto 4" },
+  { id: 1, img: "/public/mock.jpg", alt: "Servicio 1", caption: "Servicio 1" },
+  { id: 2, img: "/public/mock.jpg", alt: "Servicio 2", caption: "Servicio 2" },
+  { id: 3, img: "/public/mock.jpg", alt: "Servicio 3", caption: "Servicio 3" },
+  { id: 4, img: "/public/mock.jpg", alt: "Servicio 4", caption: "Servicio 4" },
 ];
 
 export default function Carousel() {
@@ -86,7 +86,7 @@ export default function Carousel() {
     <section className="bg-gray-50 py-16">
       <div className="max-w-7xl mx-auto px-6">
         <header className="mb-6 flex items-end justify-between">
-          <h2 className="text-2xl font-bold">Proyectos</h2>
+          <h2 className="text-2xl font-bold">Servicios</h2>
           {loaded && instanceRef.current && (
             <div className="flex items-center gap-2">
               <button

@@ -1,4 +1,7 @@
 // src/components/Header.tsx
+
+import { Link } from "react-router-dom";
+
 export default function Header() {
   return (
     <header className="bg-[#333]">
@@ -6,14 +9,15 @@ export default function Header() {
         {/* Lado izquierdo */}
         <ul className="flex items-center gap-8 mr-12 font-medium">
           <li>
-            <a href="#about" className="hover:text-gray-300">
+            <Link to="/about-tennis" className="hover:text-gray-300">
               About Tennis
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="#crew" className="hover:text-gray-300">
+            {/* Crew → va a /crew */}
+            <Link to="/crew" className="hover:text-gray-300">
               Crew
-            </a>
+            </Link>
           </li>
         </ul>
 
@@ -22,34 +26,27 @@ export default function Header() {
           href="#"
           className="font-extrabold text-xl tracking-tight flex flex-col items-center"
         >
-          <span className="flex gap-1 text-xs mb-[-4px]">
-            {/* Colocá los emojis o íconos aquí, o importá imágenes */}
-            <span role="img" aria-label="tennis ball">
-              🎾
-            </span>
-            <span role="img" aria-label="trophy">
-              🏆
-            </span>
-            <span role="img" aria-label="medal">
-              🥇
-            </span>
-          </span>
-          <span>
-            tennis <span className="text-yellow-400">GOLD</span>
-          </span>
+          <Link to="/">
+            <img
+              src="/public/logo-header.png"
+              alt="logo"
+              className="h-8 w-auto"
+            />
+          </Link>
         </a>
 
         {/* Lado derecho */}
         <ul className="flex items-center gap-8 ml-12 font-medium">
           <li>
-            <a href="#services" className="hover:text-gray-300">
+            <Link to="/services" className="hover:text-gray-300">
               Servicios
-            </a>
+            </Link>
           </li>
+
           <li>
-            <a href="#contact" className="hover:text-gray-300">
+            <Link to="/contact" className="hover:text-gray-300">
               Contacto
-            </a>
+            </Link>
           </li>
         </ul>
       </nav>
